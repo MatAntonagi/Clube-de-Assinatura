@@ -2,6 +2,10 @@
     text-decoration: none;
     padding: 0;
     margin: 0;
+
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 :root{
@@ -25,8 +29,88 @@
 
 
     --ff:"Raleway", sans-serif;
+    
+    --Title-lg: 700 1.75rem;
+    --Title-md: 700 2.5rem; 
+    --Title-sm: 700 1.5rem;
+    --Title-xs: 700 1rem;
+    --Subtitle: 600 1rem/1.4;
+    --Body-lg: 500 .875rem/1.4;
+    --Body-md: 700 .875rem;
+    --Body-sm: 700 .875rem;
+    --Body-xs: 700 .75rem;
+    --Button: 700 .875rem;
+    --Link: 500 .875rem;
+    --Tag: 700 .625rem;
+
+
+    --px-sm: 1.25rem;
+    --px-base:1.25rem;
+    --px-footer:2rem
 }
 
 html{
     font: var(--ff);
+    color: var(--text-body);
+}
+
+h1{
+    font: var(--Title-lg) var(--ff);
+    color: var(--text-title);
+}
+
+
+img{
+    display: inline-block;
+    max-width: 100%;
+}
+
+.container{
+    --max-width: 375px;
+    width: min(var(--max-width),100% - var(--px-base)*2);
+    margin-inline: auto;
+}
+
+.container-sm{
+    --max-width: 375px;
+    width: min(var(--max-width),100% - var(--px-sm)*2);
+    margin-inline: auto;
+}
+
+.desktop-only{
+    display: none;
+}
+
+@media (width >= 1280px){
+    :root{
+        --px-sm: 9.5rem;
+        --px-base:10rem;
+        --px-footer:10rem;
+
+        --Title-lg: 700 3.5rem;
+        --Title-md: 700 2.5rem; 
+        --Title-sm: 700 2rem;
+        --Title-xs: 700 1rem;
+        --Subtitle: 600 1.9rem/1.4;
+        --Body-lg: 500 1.25rem/1.4;
+        --Body-md: 700 1rem;
+        --Body-sm: 700 .875rem;
+        --Body-xs: 700 .75rem;
+        --Button: 700 .875rem;
+        --Link: 500 .875rem;
+        --Tag: 700 .625rem;
+    }
+
+    .container, .container-sm{
+        --max-width:1280px;
+    }
+
+    .mobile-only{
+        display: none;
+    }
+
+    .desktop-only{
+        display: initial;
+    }
+
 }
