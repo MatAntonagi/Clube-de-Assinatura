@@ -1,5 +1,4 @@
 section.hero{
-    background-color: var(--shape-background);
 
     & .bg-image{
         background-image: url(../assets/images/hero-background.png);
@@ -86,7 +85,7 @@ section.hero{
 
     & .about{
         margin-top: 2rem;
-        padding-top: 1.75rem;
+        padding-top: 5rem;
 
         & .content{
             width: 100%;
@@ -98,29 +97,41 @@ section.hero{
                 width: 100%;
             }
             & p{
+                padding-bottom: 5rem;
                 font: var(--Subtitle) var(--ff);
                 color: var(--text-body);
                 text-align: center;
-                position: relative;
             }
+            & span{
+                opacity: 1;
+            }
+
+            & strong{
+                color: var(--blue-ligh);
+            }
+
+            
+
             & #book{
                 max-width: 2.5rem;
                 left: 13.75rem;
+                top: -3rem;
                 transform: rotate(15deg);
             }
 
             & #ouija{
                 max-width: 2rem;
                 left: 0;
-                top: -.5rem;
+                top: 5rem;
             }
 
             & #cristal-ball{
                 max-width: 2.5rem;
                 left: 17rem;
                 transform: rotate(15deg);
-                top: -1.5rem;
+                top: 6rem;
             }
+        
         }
     }
 }
@@ -173,34 +184,35 @@ section.hero{
         & .about{
             margin-top: 6rem;
             padding-top: .5rem;
-            padding-bottom: 9rem;
             
     
             & .content{
                 animation: my 1s ease forwards ;
                 & p{
+                    width: 100%;
+                    padding-bottom: 9rem;
                     padding-top: 7rem;
 
                     & span{
                         opacity: .25;
                     };
+
                     &:hover{
                         & span{
                             animation: my .5s ease forwards ;
-
-                            & strong{
-                                animation: p-color .5s ease forwards ;
-                            }
                         }
-
+    
+                        & strong{
+                            animation: p-color .5s ease forwards ;
+                        }
                         & span:nth-child(2){
                             animation-delay: .5s;
-
+    
                             & strong{
                                 animation-delay: .5s;
                             }
                         }
-                        
+                            
                         & span:nth-child(3){
                             animation-delay: 1s;
 
@@ -208,44 +220,48 @@ section.hero{
                                 animation-delay: 1s;
                             }
                         }
+                        
                     }
                 }
                 
                 & #book{
                     max-width: 5.5rem;
                     left: 40rem;
+                    top: 1.5rem;
                     transform: rotate(15deg);
                     opacity: 0;
-                    
                 }
     
                 & #ouija{
                     max-width: 5rem;
                     left: 2rem;
-                    top: 11rem;
+                    top: 12rem;
                     transform: rotate(99deg);
                     opacity: 0;
                 }
     
                 & #cristal-ball{
                     max-width: 4.5rem;
-                    left: 71rem;
+                    left: 70rem;
                     transform: rotate(-15deg);
                     top: 12rem;
                     opacity: 0;
                 }
+
                 &:hover{
                     & #book{
                         animation: my .5s ease forwards ;
                     }
-
+    
                     & #ouija{
                         animation: my .5s .5s ease forwards ;
                     }
-
+    
                     & #cristal-ball{
                         animation: my .5s 1s ease forwards ;
                     }
                 }
+            }
+        }
     }
 }

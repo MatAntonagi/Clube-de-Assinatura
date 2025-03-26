@@ -48,6 +48,9 @@
     --px-base:1.25rem;
     --px-footer:2rem
 }
+body{
+    background-color: var(--shape-background);
+}
 
 html{
     font: var(--ff);
@@ -83,7 +86,7 @@ img{
 
 @media (width >= 1280px){
     :root{
-        --px-sm: 9.5rem;
+        --px-sm: 2.5rem;
         --px-base:10rem;
         --px-footer:10rem;
 
