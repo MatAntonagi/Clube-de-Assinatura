@@ -1,0 +1,207 @@
+section.kit{
+    width: 100%;
+    height: 39rem;
+
+    & .content{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+
+        & header{
+            margin-top: 6.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+            align-items: center;
+
+            & span{
+                font-family: "Raleway", sans-serif;
+                font-size: .875rem;
+                color:  #E2E7E9;
+            }
+            & div{
+                display: flex;
+                gap: .75rem;
+
+                & img{
+                    width: 1.25rem;
+                    background-color: rgba(149,71,165,0.1);
+                    box-shadow: 0px 0px 87px 3px rgba(149,71,165,1.1);
+                }
+
+                & h2{
+                    font: var(--Title-sm) var(--ff);
+                    color: var(--text-title);
+                }
+            }
+        }
+
+        & .book{
+            width: 100%;
+            position: relative;
+
+            & img{
+                position: absolute;
+                max-width: 100%;
+            }
+
+            & img:nth-child(1){
+                max-width: 9.8rem;
+                left: 5.43rem;
+                top: 3.12rem;
+            }
+            & img:nth-child(2){
+                max-width: 4.56rem;
+                left: 16rem;
+                top: 3rem;
+                transform: rotate(23deg);
+                z-index: -2;
+            }
+            & img:nth-child(3){
+                max-width: 4.62rem;
+                left: 13.5rem;
+                top: .5rem;
+                transform: rotate(13deg);
+                z-index: -1;
+            }
+            & img:nth-child(4){
+                max-width: 4.62rem;
+                left: 2.5rem;
+                top: 12.5rem;
+                transform: rotate(-10deg);
+                z-index: -1;
+            }
+
+            /*setas*/
+            & img:nth-child(5){
+                max-width: 3.62rem;
+                left: 2.5rem;
+                top: 3rem;
+            }
+            & img:nth-child(6){
+                max-width: 2.18rem;
+                left: 1.56rem;
+                top: 11rem;
+            }
+            & img:nth-child(7){
+                max-width: 3.13rem;
+                left: 16rem;
+                top: 14.5rem;
+            }
+
+            & span{
+                position: absolute;
+                color: var(--text-title);
+                font: .625rem var(--ff);
+            }
+
+            & #span-1{
+                top: 1.7rem;
+                left: .687rem;
+            }
+
+            & #span-2{
+                top: 9.8rem;
+                left: .698rem;
+            }
+
+            & #span-3{
+                top: 17.9rem;
+                left: 13.036rem;
+            }
+        }
+    }
+}
+
+@media (width >= 1280px){
+    section.kit{
+        height: 99rem;
+
+        & .content{
+            gap: 5.5rem;
+
+            & header{
+                margin-top: 14rem;
+                gap: .3rem;
+
+                & span{
+                    font-size: 1rem;
+                }
+
+                & div{
+                    gap: 1rem;
+
+                    & img{
+                        width: 2rem;
+                        background-color: rgba(149,71,165,0.1);
+                        box-shadow: 0px 0px 87px 3px rgba(149,71,165,1.1);
+                    }
+                }
+            }
+
+            & .book{
+    
+                & img:nth-child(1){
+                    max-width: 28rem;
+                    left: 30.18rem;
+                    top: 8.37rem;
+                }
+                & img:nth-child(2){
+                    max-width: 12rem;
+                    left: 62.37rem;
+                    top: 10rem;
+                    transform: rotate(35deg);                    
+                }
+                & img:nth-child(3){
+                    max-width: 12rem;
+                    left: 55.2rem;
+                    top: 6.5    rem;
+                    transform: rotate(15deg);
+                }
+                & img:nth-child(4){
+                    max-width: 13.87rem;
+                    left: 21.2rem;
+                    top: 35.56rem;
+                    transform: rotate(-10deg);
+                }
+    
+                /*setas*/
+                & img:nth-child(5){
+                    max-width: 10.93rem;
+                    left: 21.93rem;
+                    top: 7.18rem;
+                }
+                & img:nth-child(6){
+                    max-width: 6.56rem;
+                    left: 18rem;
+                    top: 31.25rem;
+                }
+                & img:nth-child(7){
+                    max-width: 9.06rem;
+                    left: 58.6rem;
+                    top: 41.37rem;
+                }
+    
+                & span{
+                    font: 1rem var(--ff);
+                }
+    
+                & #span-1{
+                    top: 4.37rem;
+                    left: 17.93rem;
+                }
+    
+                & #span-2{
+                    top: 28.43rem;
+                    left: 17rem;
+                }
+    
+                & #span-3{
+                    top: 51.5rem;
+                    left: 54.5rem;
+                }
+            }
+        }
+    }
+}
