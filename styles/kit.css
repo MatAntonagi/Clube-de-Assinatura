@@ -37,13 +37,21 @@ section.kit{
             }
         }
 
-        & .book{
+        & .book.mobile-only{
             width: 100%;
             position: relative;
 
             & img{
                 position: absolute;
                 max-width: 100%;
+                transition: 700ms ease;
+            }
+
+            & span{
+                position: absolute;
+                color: var(--text-title);
+                font: .625rem var(--ff);
+                animation-timeline: view(30px);
             }
 
             & img:nth-child(1){
@@ -53,24 +61,34 @@ section.kit{
             }
             & img:nth-child(2){
                 max-width: 4.56rem;
-                left: 16rem;
-                top: 3rem;
-                transform: rotate(23deg);
-                z-index: -2;
+                left: 16.5rem;
+                top: 3.2rem;
+                z-index: -1;
+                animation: book-view 700ms ease forwards, rotate-1 700ms ease both;
+                transform: translateX(-6rem);
+                animation-timeline: view();
+                animation-range: 100px ;
             }
+
             & img:nth-child(3){
                 max-width: 4.62rem;
-                left: 13.5rem;
+                left: 15.5rem;
                 top: .5rem;
-                transform: rotate(13deg);
                 z-index: -1;
+                animation: rotate-2 700ms ease forwards, eixo 700ms ease both;
+                transform: translate(-5rem, 2.7rem);
+                animation-timeline: view();
+                animation-range: 100px;
             }
             & img:nth-child(4){
                 max-width: 4.62rem;
-                left: 2.5rem;
-                top: 12.5rem;
-                transform: rotate(-10deg);
+                left: -3.5rem;
+                top: 14.5rem;
                 z-index: -1;
+                animation: eixo 700ms ease both, rotate-3 700ms ease both;
+                transform: translate(9rem, -3rem);
+                animation-timeline: view();
+                animation-range: 1px ;
             }
 
             /*setas*/
@@ -88,12 +106,6 @@ section.kit{
                 max-width: 3.13rem;
                 left: 16rem;
                 top: 14.5rem;
-            }
-
-            & span{
-                position: absolute;
-                color: var(--text-title);
-                font: .625rem var(--ff);
             }
 
             & #span-1{
@@ -114,6 +126,44 @@ section.kit{
     }
 }
 
+@keyframes book-view{
+    0{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes eixo{
+    0{
+        transform: translate(100%);
+    }
+    100%{
+        transform: translate(0);
+    }
+}
+
+@keyframes rotate-1{
+    100%{
+        transform: rotate(23deg)
+    }
+}
+
+@keyframes rotate-2{
+    100%{
+        rotate: 13deg;
+    }
+}
+
+@keyframes rotate-3{
+    100%{
+        rotate: 10deg;
+    }
+}
+
+
+    /*VERSÃO DESKTOP*/
 @media (width >= 1280px){
     section.kit{
         height: 99rem;
@@ -140,66 +190,149 @@ section.kit{
                 }
             }
 
-            & .book{
-    
+            & .book.desktop-only{
+                width: 100%;
+                position: relative;
+
+                & div{
+                    width: 100%;
+                    height: 800px;
+                }
+
+                & img{
+                    position: absolute;
+                    max-width: 100%;
+                    transition: 700ms ease;
+                }
+
+                & span{
+                    position: absolute;
+                    color: var(--text-title);
+                    font: 1rem var(--ff);
+                    transition:  700ms ease;
+                }
+
+                &:hover{
+
+                    & img:nth-child(2){
+                        left: 60.37rem;
+                        transform: rotate(35deg);
+                    }
+
+                    & img:nth-child(3){
+                        left: 55.2rem;
+                        top: 6.5rem;
+                        transform: rotate(15deg);
+                    }
+
+                    & img:nth-child(4){
+                        max-width: 13.87rem;
+                        left: 21.2rem;
+                        top: 35.56rem;
+                        transform: rotate(-10deg);
+                    }
+                    /*setas*/
+                    & img:nth-child(5){
+                        left: 21.93rem;
+                        top: 7.18rem;
+                    }
+
+                    & img:nth-child(6){
+                        max-width: 6.56rem;
+                        left: 18.5rem;
+                        top: 31.25rem;
+                    }
+
+                    & img:nth-child(7){                        
+                        left: 58.6rem;
+                        top: 41.37rem;
+                    }
+
+                    & img:nth-child(7){
+                        left: 58.6rem;
+                        top: 41.37rem;
+                    }
+
+                    & #span-1{
+                        top: 4.37rem;
+                        left: 17.93rem;
+                    }
+        
+                    & #span-2{
+                        top: 28.43rem;
+                        left: 17rem;
+                    }
+        
+                    & #span-3{
+                        top: 51.5rem;
+                        left: 54.5rem;
+                    }
+                }
                 & img:nth-child(1){
                     max-width: 28rem;
                     left: 30.18rem;
                     top: 8.37rem;
+
                 }
                 & img:nth-child(2){
                     max-width: 12rem;
-                    left: 62.37rem;
+                    left: 46.5rem;
                     top: 10rem;
-                    transform: rotate(35deg);                    
+                    z-index: -2;
+                    rotate: 0;
                 }
                 & img:nth-child(3){
                     max-width: 12rem;
-                    left: 55.2rem;
-                    top: 6.5    rem;
-                    transform: rotate(15deg);
+                    left: 46.5rem;
+                    top: 9rem;
+                    rotate: 0;
+                    z-index: -1;
+                    
                 }
                 & img:nth-child(4){
-                    max-width: 13.87rem;
-                    left: 21.2rem;
-                    top: 35.56rem;
-                    transform: rotate(-10deg);
+                    max-width: 11.87rem;
+                    left: 33.5rem;
+                    top: 33.3rem;
+                    rotate: 0;
+                    z-index: -1; 
                 }
     
                 /*setas*/
                 & img:nth-child(5){
                     max-width: 10.93rem;
-                    left: 21.93rem;
-                    top: 7.18rem;
+                    left: 33rem;
+                    top: 11.5rem;
+                    z-index: -1;
                 }
                 & img:nth-child(6){
-                    max-width: 6.56rem;
-                    left: 18rem;
-                    top: 31.25rem;
+                    max-width: 4.56rem;
+                    left: 35rem;
+                    top: 29rem;
+                    z-index: -1;
                 }
                 & img:nth-child(7){
                     max-width: 9.06rem;
-                    left: 58.6rem;
-                    top: 41.37rem;
-                }
-    
-                & span{
-                    font: 1rem var(--ff);
+                    left: 48.5rem;
+                    top: 31rem;
+                    z-index: -3;
                 }
     
                 & #span-1{
-                    top: 4.37rem;
-                    left: 17.93rem;
+                    left: 33rem;
+                    top: 10rem;
+                    z-index: -1;
                 }
     
                 & #span-2{
                     top: 28.43rem;
-                    left: 17rem;
+                    left: 33rem;
+                    z-index: -1;
                 }
     
                 & #span-3{
-                    top: 51.5rem;
-                    left: 54.5rem;
+                    top: 42rem;
+                    left: 46rem;
+                    z-index: -1;
                 }
             }
         }
