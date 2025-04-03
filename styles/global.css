@@ -2,7 +2,7 @@
     text-decoration: none;
     padding: 0;
     margin: 0;
-
+    scrollbar-width: none;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -96,9 +96,9 @@ img{
         --Title-xs: 700 1rem;
         --Subtitle: 600 1.9rem/1.4;
         --Body-lg: 500 1.25rem/1.4;
-        --Body-md: 700 1rem;
-        --Body-sm: 700 .875rem;
-        --Body-xs: 700 .75rem;
+        --Body-md: 700 1rem/1.4;
+        --Body-sm: .875rem/1.4;
+        --Body-xs: .75rem/1.4;
         --Button: 700 .875rem;
         --Link: 500 .875rem;
         --Tag: 700 .625rem;
@@ -108,12 +108,11 @@ img{
         --max-width:1280px;
     }
 
-    .mobile-only{
-        display: none;
-    }
-
     .desktop-only{
         display: initial;
     }
 
+    .mobile-only{
+        display: none;
+    }
 }

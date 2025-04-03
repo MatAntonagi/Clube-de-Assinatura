@@ -1,6 +1,6 @@
 section.kit{
     width: 100%;
-    height: 39rem;
+    max-height: 75rem;
 
     & .content{
         width: 100%;
@@ -39,12 +39,14 @@ section.kit{
 
         & .book.mobile-only{
             width: 100%;
+            height: 20rem;
             position: relative;
+            
 
             & img{
                 position: absolute;
                 max-width: 100%;
-                transition: 700ms ease;
+                transition:ease;
             }
 
             & span{
@@ -61,34 +63,34 @@ section.kit{
             }
             & img:nth-child(2){
                 max-width: 4.56rem;
-                left: 16.5rem;
+                left: 15.5rem;
                 top: 3.2rem;
                 z-index: -1;
-                animation: book-view 700ms ease forwards, rotate-1 700ms ease both;
+                animation: book-view 300ms ease forwards, rotate-1 300ms ease both;
                 transform: translateX(-6rem);
                 animation-timeline: view();
-                animation-range: 100px ;
+                animation-range: 100px 200px;
             }
 
             & img:nth-child(3){
                 max-width: 4.62rem;
-                left: 15.5rem;
+                left: 13.5rem;
                 top: .5rem;
                 z-index: -1;
-                animation: rotate-2 700ms ease forwards, eixo 700ms ease both;
-                transform: translate(-5rem, 2.7rem);
+                animation: rotate-2 300ms ease forwards, eixo 300ms ease both;
+                transform: translate(-6rem, 2.7rem);
                 animation-timeline: view();
-                animation-range: 100px;
+                animation-range: 100px 200px;
             }
             & img:nth-child(4){
                 max-width: 4.62rem;
-                left: -3.5rem;
+                left: 2.5rem;
                 top: 14.5rem;
                 z-index: -1;
-                animation: eixo 700ms ease both, rotate-3 700ms ease both;
-                transform: translate(9rem, -3rem);
+                animation: eixo-neg 300ms ease both, rotate-3 300ms ease both;
+                transform: translate(5rem, -8rem);
                 animation-timeline: view();
-                animation-range: 1px ;
+                animation-range: 100px 200px;
             }
 
             /*setas*/
@@ -96,31 +98,67 @@ section.kit{
                 max-width: 3.62rem;
                 left: 2.5rem;
                 top: 3rem;
+                z-index: -1;
+
+                animation: eixo-neg 300ms ease both, rotate-3 300ms ease both;
+                transform: translate(5rem, 3rem);
+                animation-timeline: view();
+                animation-range: 100px 200px;
             }
             & img:nth-child(6){
                 max-width: 2.18rem;
                 left: 1.56rem;
                 top: 11rem;
+                z-index: -1;
+
+                animation: eixo-neg 300ms ease both, rotate-3 300ms ease both;
+                transform: translate(5rem);
+                animation-timeline: view();
+                animation-range: 100px 200px;
             }
             & img:nth-child(7){
                 max-width: 3.13rem;
                 left: 16rem;
                 top: 14.5rem;
+                z-index: -2;
+
+                animation:eixo 300ms ease both;
+                transform: translate(-6rem, -3.5rem);
+                animation-timeline: view();
+                animation-range: 100px 200px;
             }
 
             & #span-1{
                 top: 1.7rem;
                 left: .687rem;
+                z-index: -1;
+
+                animation: eixo-neg 300ms ease both;
+                transform: translate(6rem, 3rem);
+                animation-timeline: view();
+                animation-range: 100px 200px;
             }
 
             & #span-2{
                 top: 9.8rem;
                 left: .698rem;
+                z-index: -1;
+
+                animation: eixo-neg 300ms ease both;
+                transform: translate(6rem);
+                animation-timeline: view();
+                animation-range: 100px 200px;
             }
 
             & #span-3{
                 top: 17.9rem;
                 left: 13.036rem;
+                z-index: -1;
+
+                animation:eixo 300ms ease both;
+                transform: translate(-6rem, -3.5rem);
+                animation-timeline: view();
+                animation-range: 100px 200px;
             }
         }
     }
@@ -138,6 +176,15 @@ section.kit{
 @keyframes eixo{
     0{
         transform: translate(100%);
+    }
+    100%{
+        transform: translate(0);
+    }
+}
+
+@keyframes eixo-neg{
+    0{
+        transform: translate(-100%);
     }
     100%{
         transform: translate(0);
@@ -202,14 +249,14 @@ section.kit{
                 & img{
                     position: absolute;
                     max-width: 100%;
-                    transition: 700ms ease;
+                    transition: 500ms ease;
                 }
 
                 & span{
                     position: absolute;
                     color: var(--text-title);
                     font: 1rem var(--ff);
-                    transition:  700ms ease;
+                    transition:  500ms ease;
                 }
 
                 &:hover{
