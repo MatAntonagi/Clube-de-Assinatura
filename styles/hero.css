@@ -152,9 +152,9 @@ section.hero{
 
             & #cristal-ball{
                 max-width: 2.5rem;
-                left: 17rem;
+                left: 16rem;
                 transform: rotate(15deg);
-                top: 6rem;
+                top: 7rem;
                 animation: my 100ms 60ms ease forwards;
                 animation-timeline: view(block 70px);
             }
