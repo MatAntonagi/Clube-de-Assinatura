@@ -100,7 +100,7 @@ img{
         --Body-sm: .875rem/1.4;
         --Body-xs: .75rem/1.4;
         --Button: 700 .875rem;
-        --Link: 500 .875rem;
+        --Link: .875rem;
         --Tag: 700 .625rem;
     }
 
